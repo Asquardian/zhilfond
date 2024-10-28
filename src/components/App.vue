@@ -2,6 +2,7 @@
 import SearchInput from "./search/SearchInput.vue";
 import ListContainer from "./list/ListContainer.vue";
 import ContainerView from "./containerView.vue";
+import DetailUser from "./DetailUser.vue";
 </script>
 
 <template>
@@ -11,7 +12,9 @@ import ContainerView from "./containerView.vue";
         <SearchInput />
         <ListContainer />
       </aside>
-      <ListContainer />
+      <Transition name="fade">
+        <DetailUser />
+      </Transition>
     </ContainerView>
   </main>
 </template>
@@ -26,5 +29,8 @@ main
 .sidebar:deep()
   border-right: 1px solid var.$border-color
   padding: 27px 36px 27px 20px
+  @media screen and (max-width: var.$layout-breakpoint-small)
+    border-right: none
+    padding: 27px 20px 27px 20px
 
 </style>

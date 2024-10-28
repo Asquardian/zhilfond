@@ -6,10 +6,10 @@ export default {
     return { search_username: "" };
   },
   methods: {
-    ...mapActions(["changeSearchID"]),
+    ...mapActions(["changeSearchName"]),
     changeValue() {
       const changed = this.search_username.split(/[\s,]+/);
-      this.changeSearchID(changed);
+      this.changeSearchName(changed);
     },
   },
 };

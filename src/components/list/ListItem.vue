@@ -1,4 +1,5 @@
 <script lang="js">
+
 export default {
   props: {
     item:  {
@@ -32,13 +33,14 @@ export default {
     border-radius: 10px
     box-shadow: var.$box-shadow
     transition: .5s
+    width: 100%
     cursor: pointer
     .info
-        padding: 15px
-        width: 100%
+        padding: 10px
     .name, .email
-        line-height: 5px
+        line-height: 14px
         font-size: 14px
+        word-break: break-all
     .name
         font-weight: 700
 

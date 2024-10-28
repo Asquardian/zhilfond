@@ -22,10 +22,12 @@ $border-color: rgba(222, 222, 221, 1)
 
 .container
     background-color: var.$container-color
-    height: var.$container-height
+    min-height: var.$container-height
     display: grid
-    grid-template-columns: 1fr 3fr
+    grid-template-columns: 291px 3fr
     border-radius: 10px
     box-shadow: var.$box-shadow
+    @media screen and (max-width: var.$layout-breakpoint-small)
+      display: block
 
 </style>
