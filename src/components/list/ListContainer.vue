@@ -20,12 +20,12 @@ export default {
       <div class="error" v-if="this.error != ''">
         {{ this.error }}
       </div>
-      <Transition name="fade" v-if="Object.keys(this.users).length != 0">
-        <div class="result-card">
-          <ListItem v-for="user in this.users" v-bind:item="user" />
+      <Transition name="fade">
+        <div class="result-card" v-if="Object.keys(this.users).length != 0">
+          <ListItem v-for="user in this.users" v-bind:key="user.id" v-bind:item="user" />
         </div>
+        <div v-else class="not-found">ничего не найдено</div>
       </Transition>
-      <div v-else class="not-found">ничего не найдено</div>
     </PreLoader>
   </div>
 </template>

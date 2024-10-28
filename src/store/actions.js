@@ -25,6 +25,7 @@ export const actions = {
         context.commit("setError", "Ошибка API");
       }
     } catch (error) {
+      console.debug(error);
       context.commit("setError", "Произошла ошибка");
     }
   },
