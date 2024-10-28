@@ -1,0 +1,54 @@
+<script lang="js">
+export default {
+  props: {
+    item:  {
+        type: Object,
+        required: true
+    }
+  }
+};
+</script>
+
+<template>
+  <div class="card">
+    <img
+      class="image"
+      src="./../../assets/placeholder.png"
+      alt="Изображение не найдено"
+    />
+    <div class="info">
+      <p class="name">{{ item.username }}</p>
+      <p class="email">{{ item.email }}</p>
+    </div>
+  </div>
+</template>
+
+<style lang="sass" scoped>
+
+@use './../../assets/_variables.sass' as var
+
+.card
+    display: flex
+    border-radius: 10px
+    box-shadow: var.$box-shadow
+    transition: .5s
+    cursor: pointer
+    .info
+        padding: 15px
+        width: 100%
+    .name, .email
+        line-height: 5px
+        font-size: 14px
+    .name
+        font-weight: 700
+
+    &:hover
+        background-color: rgba(224, 224, 224, 1)
+
+.image
+    border-radius: 10px 0 0px 10px
+    border-right: 1px solid var.$border-color
+    width: 70px
+    aspect-ratio: 1/1
+    object-fit: cover
+</style>
