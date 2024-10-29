@@ -2,7 +2,10 @@
 
 <template>
   <div class="content">
-    <img class="logo" src="./../assets/logo.svg" alt="Жилфонд" />
+    <div class="flex-box">
+      <img class="logo" src="./../assets/logo.svg" alt="Жилфонд" />
+      <p>Пользователь</p>
+    </div>
     <div class="container">
       <slot></slot>
     </div>
@@ -19,6 +22,12 @@ $border-color: rgba(222, 222, 221, 1)
 .content
     max-width: 1266px
     margin: auto
+
+.flex-box
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: var.$layout-breakpoint-small)
+    display: grid
 
 .container
     background-color: var.$container-color

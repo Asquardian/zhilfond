@@ -7,7 +7,7 @@ import DetailUser from "./DetailUser.vue";
 
 <template>
   <main>
-    <ContainerView>
+    <ContainerView class="center-align">
       <aside class="sidebar">
         <SearchInput />
         <ListContainer />
@@ -24,7 +24,12 @@ import DetailUser from "./DetailUser.vue";
 
 main
   width: 100%
-  min-height: 100vh
+  min-height: 90vh
+  display: flex
+  align-items: center
+
+.center-align
+  flex: 1
 
 .sidebar:deep()
   border-right: 1px solid var.$border-color
