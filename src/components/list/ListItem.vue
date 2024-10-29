@@ -1,17 +1,18 @@
 <script lang="js">
-
+import { mapActions } from "vuex";
 export default {
   props: {
     item:  {
         type: Object,
         required: true
     }
-  }
+  },
+  methods:{ ...mapActions(['getUserDataByID']) }
 };
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" @click="getUserDataByID(item.id)">
     <img
       class="image"
       src="./../../assets/placeholder.png"

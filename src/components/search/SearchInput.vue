@@ -8,7 +8,7 @@ export default {
   methods: {
     ...mapActions(["changeSearchName"]),
     changeValue() {
-      const changed = this.search_username.split(/[\s,]+/);
+      const changed = this.search_username.split(/[\s,]+/);//Сторка разибвается на массив через запятую и пробел
       this.changeSearchName(changed);
     },
   },
